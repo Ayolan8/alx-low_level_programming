@@ -1,6 +1,7 @@
 #include <stdio.h>
-/**main entry for the code
- *function is a bae
+/**
+ * main entry for the code
+ * function is a bae
  */
 int main(void)
 {
