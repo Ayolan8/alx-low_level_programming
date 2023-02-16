@@ -1,2 +1,2 @@
 #!/bin/bash
-export $CFILE=printf((unsigned long)sizeof(i)); return 0;
+sizeof(int); sizeof(char); sizeof(float); return 0; 
