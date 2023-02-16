@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main entry for the code
- * function is a bae
+ * main - A program that prints a line with puts function
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
-			return (0);
+puts("\"Programming is like building a multilingual puzzle\n");
+return (0);
 }
