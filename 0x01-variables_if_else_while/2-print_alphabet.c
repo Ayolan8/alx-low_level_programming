@@ -10,7 +10,8 @@ int main(void)
 	for (c = 'A'; c <= 'Z'; c++)
 	{
 		int lower_c = tolower(c);
-		putchar(c);
+
+		putchar(lower_c);
 		putchar('\n');
 	}
 	return (0);
