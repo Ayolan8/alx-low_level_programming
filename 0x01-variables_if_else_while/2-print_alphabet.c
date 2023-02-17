@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
  * main - A C program that prints alphabet in lowercase
  * Return: 0 (Success)
@@ -11,7 +12,7 @@ int main(void)
 	{
 		int lower_c = tolower(c);
 
-		putchar(lower_c);
+		putchar(c);
 		putchar('\n');
 	}
 	return (0);
