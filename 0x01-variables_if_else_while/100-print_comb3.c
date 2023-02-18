@@ -11,11 +11,11 @@ int main(void)
 	while
 		(x < 30)
 	{
-		putchar(x + '0');
+		putchar('0' + x);
 		x++;
 		if ((x != 11 && x != 22) && x < 30)
 		{
-			putchar(x + '0');
+			putchar('0' + x);
 		}
 		putchar(',');
 		putchar(' ');
