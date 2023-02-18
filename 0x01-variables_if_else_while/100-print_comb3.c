@@ -16,7 +16,7 @@ int main(void)
 			{
 				putchar('0' + tenth);
 				putchar('0' + unit);
-				if (!(unit == 9 && tenth == 8))
+				if (!(unit == 9 && tenth == 9))
 				{
 					putchar(',');
 					putchar(' ');
