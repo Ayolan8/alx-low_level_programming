@@ -5,20 +5,20 @@
  */
 int main(void)
 {
-	int x;
-	int y;
+	int unit;
+	int tenth;
 
-	y = '0';
-	x = '0';
-	for (y = '0'; y <= '9'; y++)
+	unit = '0';
+	tenth = '0';
+	for (unit = '0'; unit <= '9'; unit++)
 	{
-		for (x = '0'; x <= '9'; x++)
+		for (tenth = '0'; tenth <= '9'; tenth++)
 		{
-			if (!((y == x) || (x > y)))
+			if (!((unit == tenth) || (tenth > unit)))
 			{
-				putchar(y);
-				putchar(x);
-				if (!(x == '9' && y == '8'))
+				putchar(tenth);
+				putchar(unit);
+				if (!(unit == '9' && tenth == '8'))
 				{
 					putchar(',');
 					putchar(' ');
