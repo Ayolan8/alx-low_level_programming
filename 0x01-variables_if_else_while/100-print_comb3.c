@@ -8,17 +8,15 @@ int main(void)
 	int unit;
 	int tenth;
 
-	unit = '0';
-	tenth = '0';
-	for (unit = '0'; unit <= '9'; unit++)
+	for (unit = 0; unit <= 9; unit++)
 	{
-		for (tenth = '0'; tenth <= '9'; tenth++)
+		for (tenth = 0; tenth <= 9; tenth++)
 		{
 			if (!((unit == tenth) || (tenth > unit)))
 			{
-				putchar(tenth);
-				putchar(unit);
-				if (!(unit == '9' && tenth == '8'))
+				putchar('0' + tenth);
+				putchar('0' + unit);
+				if (!(unit == 9 && tenth == 8))
 				{
 					putchar(',');
 					putchar(' ');
