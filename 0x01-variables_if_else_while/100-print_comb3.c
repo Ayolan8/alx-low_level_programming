@@ -6,19 +6,25 @@
 int main(void)
 {
 	int x;
+	int y;
 
-	x = 10;
-	while
-		(x < 30)
+	y = '0';
+	x = '0';
+	for (y = '0'; y <= '9'; y++)
 	{
-		putchar('0' + x);
-		x++;
-		if ((x != 11 && x != 22) && x < 30)
+		for (x = '0'; x <= '9'; x++)
 		{
-			putchar('0' + x);
+			if (!((y == x) || (x > y)))
+			{
+				putchar(y);
+				putchar(x);
+				if (!(x == '9' && y == '8'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
-		putchar(',');
-		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
