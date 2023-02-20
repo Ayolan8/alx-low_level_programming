@@ -15,12 +15,12 @@ int main(void)
 		{
 			for (o = 0; o < 9; o++)
 			{
-				if (!((o == t) || (t == h) || (t > o) || (h > t)))
+				if (o != h && t != h && h < t && t < o)
 				{
 					putchar('0' + h);
 					putchar('0' + t);
 					putchar('0' + o);
-					if (!(o == 7 && t == 8 && h == 9))
+					if (o + t + h != 9 + 8 + 7)
 					{
 						putchar(',');
 						putchar(' ');
