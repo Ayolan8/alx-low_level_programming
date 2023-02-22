@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * int add() - function that adds two integers
- * int x - parameter of add() function
- * int y - parameter of add() function
+ * add - function that adds two integers
+ * @x: parameter to be printed
+ * @y: parameter to be printed
  * Return: result (success)
  */
 int add(int x, int y)
