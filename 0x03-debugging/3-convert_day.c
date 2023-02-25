@@ -46,7 +46,7 @@ int convert_day(int month, int day)
 	day = 334 + day;
 	break;
 	default:
-	 break;
+	break;
 	}
 	return (day);
 }
