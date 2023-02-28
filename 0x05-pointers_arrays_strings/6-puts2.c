@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts - a function to print character of a string
+ * puts2 - a function to print character of a string
  * @str: an input
  */
 void puts2(char *str)
