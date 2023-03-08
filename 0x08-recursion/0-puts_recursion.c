@@ -5,16 +5,13 @@
  */
 void _puts_recursion(char *s)
 {
-	int x;
-	char c[] = "Puts with recursion";
-
-	s = c;
-	for (x = 0; *(s + x); s++)
+	if (*s == '\0')
 	{
-		if (*s != '\0')
-		{
-			_putchar(*s);
-		}
+		_putchar('\n');
 	}
-	_putchar('\0');
+	else
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
 }
