@@ -8,6 +8,11 @@
  */
 int main(int argc, __attribute__((unused)) char *argv[])
 {
-	printf("argc = %d\n", argc);
+	int x;
+
+	x = 0;
+	while (x < argc)
+		x++;
+	printf("argc = %d\n", x - 1);
 	return (0);
 }
