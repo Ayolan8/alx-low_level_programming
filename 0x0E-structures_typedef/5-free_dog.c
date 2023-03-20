@@ -1,14 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "dog.h"
+#include <stdlib.h>
 /**
- * free_dog - Entry Point
- * @d: struct to free
- * Return: 0
+ * free_dog - function to free space
+ * @d: pointer to dog typedef type
+ * Return: Always success
  */
+
 void free_dog(dog_t *d)
 {
 	if (d == NULL)
 		return;
+	free(d->name);
+	free(d->owner);
 	free(d);
 }
