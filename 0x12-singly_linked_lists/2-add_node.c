@@ -1,31 +1,26 @@
 #include "lists.h"
-
 /**
- * add_node - function to add a new node at the beginning of list_t
- * @head: pointer to the pointer to list_t
- * @str: pointer to string to copy on to the node
- * Return: address of new element or null if not successful
+ * *add_node - function to add node to start
+ * @head: pointer to pointer of list_t struct type
+ * @str: pointer to string input
+ * Return: Always Successful
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *add;
-	int a;
+	list_t *temp = NULL;
+	unsigned int counter;
 
-	add = malloc(sizeof(list_t));
-	if (add == NULL)
+	temp = malloc(sizeof(list_t));
+	if (temp == NULL)
 		return (NULL);
-	for (a = 0; str[a] != '\0'; a++)
+	counter = 0;
+	while (str[counter] != '\0')
 	{
-		;
+		counter++;
 	}
-	add->str = strdup(str);
-	if (add->str == NULL)
-	{
-		free(add);
-		return (NULL);
-	}
-	add->len = a;
-	add->next = *head;
-	*head = add;
+	temp->len = counter;
+	temp->str = strdup(str);
+	temp->next = *head;
+	*head = temp;
 	return (*head);
 }
