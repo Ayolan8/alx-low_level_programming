@@ -11,8 +11,6 @@ size_t print_listint(const listint_t *h)
 	const listint_t *pntr = NULL;
 	int x = 0;
 
-	if (h == NULL)
-		printf("%s", "ERROR");
 	pntr = h;
 	while (pntr != NULL)
 	{
