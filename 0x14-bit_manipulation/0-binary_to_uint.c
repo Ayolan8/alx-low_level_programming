@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 /**
- * binary_to_unit - function that converts a binary number 
+ * binary_to_uint - function that converts a binary number
  * @b: string to be converted
  * Return: the converted number
  */
