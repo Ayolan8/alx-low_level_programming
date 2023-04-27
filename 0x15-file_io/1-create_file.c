@@ -11,32 +11,28 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fil;
-	int len = 0;
-	int inln = 0;
-	char *pntr;
+	int hd, len, hdwrt;
 
-	if (filename == NULL)
+	hd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	if (hd == -1)
 	{
 		return (-1);
 	}
 
-	fil = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
-	if (fil == -1)
+	if (text_content == NULL)
+	{
+		text_content = "";
+	}
+	len = 0;
+	while (text_content[len] != '\0')
+	{
+		len++;
+	}
+	hdwrt = write(hd, text_content, len);
+	if (hdwrt == -1)
 	{
 		return (-1);
 	}
-
-	if (text_content != NULL)
-	{
-		for (; ((pntr) = text_content); pntr++)
-			inln++;
-		len = write(fil, text_content, inln);
-	}
-
-	if (close(fil) == -1 || inln != len)
-	{
-		return (-1);
-	}
+	close(hd);
 	return (1);
 }
